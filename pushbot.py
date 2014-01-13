@@ -6,7 +6,14 @@ import sys
 jid = xmpp.protocol.JID('...@jabber.ccc.de')
 psswrd = '...'
 
-recipients = ['...@jabber.ccc.de']
+rcps_list = ['some_key' : 'jabber_name@server' ]
+rcps_list.pop(sys.argv[2])
+
+recipients = []
+
+for key, value in rcps_list.iteritems():
+	recipients.append(value)
+
 msg = 'Push-Notification\n------------\n' + sys.argv[1]
 
 client = xmpp.Client(jid.getDomain(), debug=[])
