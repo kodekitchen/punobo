@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Make Script executable and call python <somepath>/pushbot.py "Message about push" from post-receive hook on remote git repository.
 
 Second argument is key that shall be popped when sending messages. Intended for excluding commiter from message queue.
@@ -21,7 +20,3 @@ If ConcernedCommiter is pushing to the repository he is ommited from the message
 requires python-xmpppy 
 
 ...and python :-)
-=======
-punobo
-======
->>>>>>> 5f518f1cb49878a00492e2e43bfc2c553506828c
