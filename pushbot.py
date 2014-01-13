@@ -7,7 +7,10 @@ jid = xmpp.protocol.JID('...@jabber.ccc.de')
 psswrd = '...'
 
 rcps_list = ['some_key' : 'jabber_name@server' ]
-rcps_list.pop(sys.argv[2])
+try:
+	del rcps_list[sys.argv[2]]
+except KeyError:
+	pass
 
 recipients = []
 
